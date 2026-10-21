@@ -54,6 +54,14 @@
     <Compile Include="EjercicioDos\Form_EjercicioDos.Designer.cs">
       <DependentUpon>Form_EjercicioDos.cs</DependentUpon>
     </Compile>
+    <Compile Include="EjercicioTres\BibliotecaDatos.cs" />
+    <Compile Include="EjercicioTres\Form_EjercicioTres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjercicioTres\Form_EjercicioTres.Designer.cs">
+      <DependentUpon>Form_EjercicioTres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjercicioTres\Libro.cs" />
     <Compile Include="EjercicioUno\Form_EjercicioUno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +74,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="EjercicioDos\Form_EjercicioDos.resx">
       <DependentUpon>Form_EjercicioDos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjercicioTres\Form_EjercicioTres.resx">
+      <DependentUpon>Form_EjercicioTres.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EjercicioUno\Form_EjercicioUno.resx">
       <DependentUpon>Form_EjercicioUno.cs</DependentUpon>
