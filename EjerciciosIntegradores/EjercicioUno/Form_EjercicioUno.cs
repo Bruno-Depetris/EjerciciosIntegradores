@@ -1,14 +1,20 @@
-using System;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using EjerciciosIntegradores.EjercicioUno;
 
-namespace EjerciciosIntegradores {
-    public partial class FormEjercicio1 : Form {
+namespace EjerciciosIntegradores.EjercicioUno {
+    public partial class Form_EjercicioUno : Form {
         private ProductoDatos datos = new ProductoDatos();
-
-        public FormEjercicio1() {
+        public Form_EjercicioUno() {
             InitializeComponent();
+            ActualizarDatos();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e) {
@@ -38,25 +44,29 @@ namespace EjerciciosIntegradores {
                 txtNombre.Clear();
                 txtPrecio.Clear();
                 txtStock.Clear();
+                ActualizarDatos();
             } catch(Exception ex) {
                 MessageBox.Show("Error al guardar: " + ex.Message);
             }
         }
 
         private void btnListar_Click(object sender, EventArgs e) {
-            try {
-                List<Producto> productos = datos.ObtenerTodos();
-                dgvProductos.DataSource = productos;
-
-                decimal total = 0;
-                foreach(Producto producto in productos) {
-                    total += producto.CalcularValor();
-                }
-
-                lblTotal.Text = "Total inventario: $" + total.ToString("N2");
-            } catch(Exception ex) {
-                MessageBox.Show("Error al listar: " + ex.Message);
-            }
+            ActualizarDatos();
         }
+
+        private void ActualizarDatos() {
+            ArrayList productos = datos.ObtenerTodos();
+            dgvProductos.DataSource = null;
+            dgvProductos.DataSource = productos;
+            decimal total = 0;
+            foreach(Producto producto in productos) {
+                total += producto.CalcularValor();
+            }
+
+            lblTotal.Text = "Total inventario: $" + total.ToString("N2");
+        }
+
+
+
     }
 }

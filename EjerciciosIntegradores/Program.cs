@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EjerciciosIntegradores.EjercicioDos;
+using EjerciciosIntegradores.EjercicioUno;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -13,7 +15,7 @@ namespace EjerciciosIntegradores {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormEjercicio1());
+            Application.Run(new Form_EjercicioDos());
         }
     }
 }

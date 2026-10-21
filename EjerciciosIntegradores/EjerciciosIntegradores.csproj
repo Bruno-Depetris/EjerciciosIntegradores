@@ -46,51 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EjercicioUno\FormEjercicio1.cs">
+    <Compile Include="EjercicioDos\Alumno.cs" />
+    <Compile Include="EjercicioDos\AlumnoDatos.cs" />
+    <Compile Include="EjercicioDos\Form_EjercicioDos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EjercicioUno\FormEjercicio1.Designer.cs">
-      <DependentUpon>FormEjercicio1.cs</DependentUpon>
+    <Compile Include="EjercicioDos\Form_EjercicioDos.Designer.cs">
+      <DependentUpon>Form_EjercicioDos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjercicioUno\Form_EjercicioUno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjercicioUno\Form_EjercicioUno.Designer.cs">
+      <DependentUpon>Form_EjercicioUno.cs</DependentUpon>
     </Compile>
     <Compile Include="EjercicioUno\Producto.cs" />
     <Compile Include="EjercicioUno\ProductoDatos.cs" />
-    <Compile Include="EjercicioDos\FormEjercicio2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EjercicioDos\FormEjercicio2.Designer.cs">
-      <DependentUpon>FormEjercicio2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EjercicioDos\Alumno.cs" />
-    <Compile Include="EjercicioDos\AlumnoDatos.cs" />
-    <Compile Include="EjercicioTres\FormEjercicio3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EjercicioTres\FormEjercicio3.Designer.cs">
-      <DependentUpon>FormEjercicio3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EjercicioTres\Libro.cs" />
-    <Compile Include="EjercicioTres\LibroDatos.cs" />
-    <Compile Include="EjercicioCuatro\FormEjercicio4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EjercicioCuatro\FormEjercicio4.Designer.cs">
-      <DependentUpon>FormEjercicio4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EjercicioCuatro\Empleado.cs" />
-    <Compile Include="EjercicioCuatro\Administrativo.cs" />
-    <Compile Include="EjercicioCuatro\Vendedor.cs" />
-    <Compile Include="EjercicioCuatro\EmpleadoDatos.cs" />
-    <Compile Include="EjercicioCinco\FormEjercicio5.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EjercicioCinco\FormEjercicio5.Designer.cs">
-      <DependentUpon>FormEjercicio5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EjercicioCinco\Producto.cs" />
-    <Compile Include="EjercicioCinco\ProductoDatos.cs" />
-    <Compile Include="EjercicioCinco\VentaDatos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EjercicioDos\Form_EjercicioDos.resx">
+      <DependentUpon>Form_EjercicioDos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjercicioUno\Form_EjercicioUno.resx">
+      <DependentUpon>Form_EjercicioUno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
