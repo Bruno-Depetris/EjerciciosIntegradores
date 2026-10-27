@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 
 namespace EjerciciosIntegradores.EjercicioUno {
     public class ProductoDatos {
+
         private string connectionString =
             "Data Source=(localdb)\\MSSQLLocalDB;" +
             "Initial Catalog=Purebas;" +

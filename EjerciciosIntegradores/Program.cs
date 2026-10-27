@@ -17,6 +17,12 @@ namespace EjerciciosIntegradores {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            // si quieren probar los otros ejercicios, cambien el nombre del formulario que se pasa a Application.Run()
+            //o descomenten la línea del ejercicio que quieran probar y comenten la del ejercicio que no quieran probar
+            // Application.Run(new Form_EjercicioUno());
+            // Application.Run(new Form_EjercicioDos());
+            // Application.Run(new Form_EjercicioTres());
+            // Application.Run(new Form_EjercicioCuatro()); 
             Application.Run(new Form_EjercicioCinco());
         }
     }

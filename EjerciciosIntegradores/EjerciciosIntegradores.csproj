@@ -54,6 +54,7 @@
     </Compile>
     <Compile Include="EjercicioCinco\Producto.cs" />
     <Compile Include="EjercicioCinco\ProductoDatos.cs" />
+    <Compile Include="EjercicioCinco\Venta.cs" />
     <Compile Include="EjercicioCinco\VentaDatos.cs" />
     <Compile Include="EjercicioDos\Alumno.cs" />
     <Compile Include="EjercicioDos\AlumnoDatos.cs" />

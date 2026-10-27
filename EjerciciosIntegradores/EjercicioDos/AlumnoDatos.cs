@@ -45,8 +45,8 @@ namespace EjerciciosIntegradores.EjercicioDos {
             conexion.Open();
 
             SqlDataReader lector = comando.ExecuteReader();
-
-            while(lector.Read()) {
+            conexion.Close();
+            while (lector.Read()) {
                 Alumno alumn = new Alumno();
                 alumn.AlumnoID = int.Parse(lector ["Id"].ToString());
                 alumn.Nombre = lector ["Nombre"].ToString();
