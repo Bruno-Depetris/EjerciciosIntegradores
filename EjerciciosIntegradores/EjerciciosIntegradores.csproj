@@ -46,6 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EjercicioCinco\Form_EjercicioCinco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjercicioCinco\Form_EjercicioCinco.Designer.cs">
+      <DependentUpon>Form_EjercicioCinco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjercicioCinco\Producto.cs" />
+    <Compile Include="EjercicioCinco\ProductoDatos.cs" />
+    <Compile Include="EjercicioCinco\VentaDatos.cs" />
     <Compile Include="EjercicioDos\Alumno.cs" />
     <Compile Include="EjercicioDos\AlumnoDatos.cs" />
     <Compile Include="EjercicioDos\Form_EjercicioDos.cs">
@@ -72,6 +81,9 @@
     <Compile Include="EjercicioUno\ProductoDatos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EjercicioCinco\Form_EjercicioCinco.resx">
+      <DependentUpon>Form_EjercicioCinco.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EjercicioDos\Form_EjercicioDos.resx">
       <DependentUpon>Form_EjercicioDos.cs</DependentUpon>
     </EmbeddedResource>

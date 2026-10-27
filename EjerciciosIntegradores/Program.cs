@@ -1,4 +1,5 @@
-﻿using EjerciciosIntegradores.EjercicioDos;
+﻿using EjerciciosIntegradores.EjercicioCinco;
+using EjerciciosIntegradores.EjercicioDos;
 using EjerciciosIntegradores.EjercicioTres;
 using EjerciciosIntegradores.EjercicioUno;
 using System;
@@ -16,7 +17,7 @@ namespace EjerciciosIntegradores {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_EjercicioTres());
+            Application.Run(new Form_EjercicioCinco());
         }
     }
 }
