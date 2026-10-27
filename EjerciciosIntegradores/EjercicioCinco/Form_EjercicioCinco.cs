@@ -6,11 +6,9 @@ namespace EjerciciosIntegradores.EjercicioCinco {
     public partial class Form_EjercicioCinco : Form {
         private ProductoDatos productoDatos = new ProductoDatos();
         private VentaDatos ventaDatos = new VentaDatos();
-        private string[] categorias = { "Electronica", "Libreria", "Hogar" };
         private ArrayList productos = new ArrayList();     
-        private Hashtable carrito = new Hashtable();       //clave-valor => producto - cantidad
-        private int[] unidadesPorCategoria = new int[3];  
-        private decimal[,] resumen = new decimal[3, 2];    
+        private Hashtable carrito = new Hashtable();       //clave-valor => producto cantidad
+  
 
         public Form_EjercicioCinco() {
             InitializeComponent();
@@ -33,9 +31,9 @@ namespace EjerciciosIntegradores.EjercicioCinco {
                 cmbProducto.Items.Insert(0, "Seleccione un producto");
 
                 foreach (Producto producto in productos) {
-                    if (ObtenerCategoria(producto.Categoria) != -1) {
-                        cmbProducto.Items.Add(producto.Id + " - " + producto.Nombre);
-                    }
+                    
+                    cmbProducto.Items.Add(producto.Id + " - " + producto.Nombre);
+                    
                 }
 
                 cmbProducto.SelectedIndex = 0;
@@ -118,34 +116,19 @@ namespace EjerciciosIntegradores.EjercicioCinco {
        
         private void MostrarDetalle() {
             dgvDetalle.Rows.Clear();
-
-           
-            unidadesPorCategoria = new int[3];
-            resumen = new decimal[3, 2];
-
             decimal total = 0;
+
 
             foreach (Producto producto in productos) {
             
-                if (!carrito.ContainsKey(producto.Id)) {
-                    continue;
-                }
-
-                int categoria = ObtenerCategoria(producto.Categoria);
-                if (categoria == -1) {
-                    continue;
-                }
 
                 int cantidad = Convert.ToInt32(carrito[producto.Id]);
                 decimal subtotal = producto.CalcularSubtotal(cantidad);
 
-                
-                unidadesPorCategoria[categoria] += cantidad;
-                resumen[categoria, 0] = unidadesPorCategoria[categoria];
-                resumen[categoria, 1] += subtotal;
+                if (cantidad > 0) {
 
-               
-                dgvDetalle.Rows.Add(producto.Nombre,producto.Categoria,cantidad,producto.Precio.ToString(),subtotal.ToString());
+                    dgvDetalle.Rows.Add(producto.Nombre, producto.Categoria, cantidad, producto.Precio.ToString(), subtotal.ToString());
+                }
 
                 total += subtotal;
             }
@@ -154,14 +137,5 @@ namespace EjerciciosIntegradores.EjercicioCinco {
         }
 
         
-        private int ObtenerCategoria(string nombreCategoria) {
-            for (int i = 0; i < categorias.Length; i++) {
-                if (categorias[i].ToLower() == nombreCategoria.ToLower()) {
-                    return i;
-                }
-            }
-
-            return -1;
-        }
     }
 }

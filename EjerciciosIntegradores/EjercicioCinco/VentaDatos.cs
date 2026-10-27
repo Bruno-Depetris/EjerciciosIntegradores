@@ -36,7 +36,7 @@ namespace EjerciciosIntegradores.EjercicioCinco {
         }
 
         public bool CrearVenta(Producto producto, int cantidad) {
-            string consulta = $"INSERT INTO Ventas (ProductoId, Cantidad, Subtotal) VALUES ({producto.Id}, {cantidad}, {producto.CalcularSubtotal(cantidad)})";
+            string consulta = $"INSERT INTO DetalleVentas (ProductoId, Cantidad, Subtotal) VALUES ({producto.Id}, {cantidad}, {producto.CalcularSubtotal(cantidad)})";
             SqlConnection conexion = new SqlConnection(connectionString);
             SqlCommand comando = new SqlCommand(consulta, conexion);
             conexion.Open();
